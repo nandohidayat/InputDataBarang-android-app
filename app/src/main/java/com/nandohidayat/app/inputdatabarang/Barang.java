@@ -5,9 +5,9 @@ public class Barang {
     private String NamaBarang;
     private double HargaBeli;
     private double HargaJual;
-    private double Stok;
+    private int Stok;
 
-    public Barang(String kodeBarang, String namaBarang, double hargaBeli, double hargaJual, double stok) {
+    public Barang(String kodeBarang, String namaBarang, double hargaBeli, double hargaJual, int stok) {
         KodeBarang = kodeBarang;
         NamaBarang = namaBarang;
         HargaBeli = hargaBeli;
@@ -51,7 +51,7 @@ public class Barang {
         return Stok;
     }
 
-    public void setStok(double stok) {
+    public void setStok(int stok) {
         Stok = stok;
     }
 }
