@@ -1,50 +1,50 @@
 package com.nandohidayat.app.inputdatabarang;
 
 public class Barang {
-    private String KdBrg;
-    private String NmBrg;
-    private double HrgBeli;
-    private double HrgJual;
+    private String KodeBarang;
+    private String NamaBarang;
+    private double HargaBeli;
+    private double HargaJual;
     private double Stok;
 
-    public Barang(String kdBrg, String nmBrg, double hrgBeli, double hrgJual, double stok) {
-        KdBrg = kdBrg;
-        NmBrg = nmBrg;
-        HrgBeli = hrgBeli;
-        HrgJual = hrgJual;
+    public Barang(String kodeBarang, String namaBarang, double hargaBeli, double hargaJual, double stok) {
+        KodeBarang = kodeBarang;
+        NamaBarang = namaBarang;
+        HargaBeli = hargaBeli;
+        HargaJual = hargaJual;
         Stok = stok;
     }
 
-    public String getKdBrg() {
-        return KdBrg;
+    public String getKodeBarang() {
+        return KodeBarang;
     }
 
-    public void setKdBrg(String kdBrg) {
-        KdBrg = kdBrg;
+    public void setKodeBarang(String kodeBarang) {
+        KodeBarang = kodeBarang;
     }
 
-    public String getNmBrg() {
-        return NmBrg;
+    public String getNamaBarang() {
+        return NamaBarang;
     }
 
-    public void setNmBrg(String nmBrg) {
-        NmBrg = nmBrg;
+    public void setNamaBarang(String namaBarang) {
+        NamaBarang = namaBarang;
     }
 
-    public double getHrgBeli() {
-        return HrgBeli;
+    public double getHargaBeli() {
+        return HargaBeli;
     }
 
-    public void setHrgBeli(double hrgBeli) {
-        HrgBeli = hrgBeli;
+    public void setHargaBeli(double hargaBeli) {
+        HargaBeli = hargaBeli;
     }
 
-    public double getHrgJual() {
-        return HrgJual;
+    public double getHargaJual() {
+        return HargaJual;
     }
 
-    public void setHrgJual(double hrgJual) {
-        HrgJual = hrgJual;
+    public void setHargaJual(double hargaJual) {
+        HargaJual = hargaJual;
     }
 
     public double getStok() {
