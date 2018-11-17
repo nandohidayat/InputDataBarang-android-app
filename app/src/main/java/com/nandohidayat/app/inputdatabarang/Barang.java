@@ -47,7 +47,7 @@ public class Barang {
         HargaJual = hargaJual;
     }
 
-    public double getStok() {
+    public int getStok() {
         return Stok;
     }
 
