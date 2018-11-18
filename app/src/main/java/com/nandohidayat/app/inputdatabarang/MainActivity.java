@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         DatabaseHandler db = new DatabaseHandler(this);
 
         db.addBarang(new Barang("B0001", "Buku", 5000.0, 6000.0, 100));
