@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     String dB[] = null;
     private ListView listView;
     private CustomAdapter adapter;
+    List<Barang> barangList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         db.addBarang(new Barang("B0001", "Buku", 5000.0, 6000.0, 100));
 
-        List<Barang> barangList = db.getSemuaBarang();
+        barangList = db.getSemuaBarang();
         listView = (ListView) findViewById(R.id.listBarang);
 
         adapter = new CustomAdapter(barangList, this);
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1: {
                     DatabaseHandler db = new DatabaseHandler(this);
                     AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-                    db.deleteRow(dB[info.position]);
+                    db.deleteRow(barangList.get(info.position).getKodeBarang());
                     Class c = Class.forName("com.nandohidayat.app.inputdatabarang.MainActivity");
                     Intent i = new Intent(MainActivity.this, c);
                     startActivity(i);
