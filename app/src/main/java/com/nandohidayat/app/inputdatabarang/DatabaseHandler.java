@@ -104,7 +104,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         System.out.println("Data terhapus " + barang.getKodeBarang());
     }
 
-    public void deleteRow(Barang xKdBrg) {
+    public void deleteRow(String xKdBrg) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_BARANG, KEY_KODEBARANG + "='" + xKdBrg + "'", null);
         db.close();
