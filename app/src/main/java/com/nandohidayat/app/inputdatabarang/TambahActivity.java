@@ -25,10 +25,10 @@ public class TambahActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String KdBrg = editKdBrg.getText().toString();
-                String NmBrg = editKdBrg.getText().toString();
-                Double HrgBeli = Double.parseDouble(editKdBrg.getText().toString());
-                Double HrgJual = Double.parseDouble(editKdBrg.getText().toString());
-                int Stok = Integer.parseInt(editKdBrg.getText().toString());
+                String NmBrg = editNmBrg.getText().toString();
+                Double HrgBeli = Double.parseDouble(editHrgBeli.getText().toString());
+                Double HrgJual = Double.parseDouble(editHrgJual.getText().toString());
+                int Stok = Integer.parseInt(editStok.getText().toString());
 
                 db.addBarang(new Barang(KdBrg, NmBrg, HrgBeli, HrgJual, Stok));
 
