@@ -34,10 +34,10 @@ public class CustomAdapter extends ArrayAdapter<Barang> {
         textNmBrg.setText(barang.getNamaBarang());
 
         TextView textHrgBeli = (TextView) listItem.findViewById(R.id.textHrgBeli);
-        textHrgBeli.setText(String.format("%f",barang.getHargaBeli()));
+        textHrgBeli.setText(String.format("Rp %.2f",barang.getHargaBeli()));
 
         TextView textHrgJual = (TextView) listItem.findViewById(R.id.textHrgJual);
-        textHrgJual.setText(String.format("%f",barang.getHargaJual()));
+        textHrgJual.setText(String.format("Rp %.2f",barang.getHargaJual()));
 
         TextView textStok = (TextView) listItem.findViewById(R.id.textStok);
         textStok.setText(String.format("%d",barang.getStok()));
