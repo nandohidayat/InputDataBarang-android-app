@@ -12,7 +12,6 @@
         android:id="@+id/inKdBrg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Kode Barang"
         android:layout_marginBottom="5dp"/>
 
     <TextView
@@ -24,7 +23,6 @@
         android:id="@+id/inNmBrg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Barang"
         android:layout_marginBottom="5dp"/>
 
     <TextView
@@ -36,7 +34,6 @@
         android:id="@+id/inHrgBeli"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Harga Beli"
         android:layout_marginBottom="5dp"/>
 
     <TextView
@@ -48,7 +45,6 @@
         android:id="@+id/inHrgJual"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Harga Jual"
         android:layout_marginBottom="5dp"/>
 
     <TextView
@@ -60,7 +56,6 @@
         android:id="@+id/inStok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Stok"
         android:layout_marginBottom="5dp"/>
 
     <Button
