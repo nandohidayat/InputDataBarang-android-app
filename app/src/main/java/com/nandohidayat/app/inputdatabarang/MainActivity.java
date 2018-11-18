@@ -29,18 +29,6 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHandler db = new DatabaseHandler(this);
 
         db.addBarang(new Barang("B0001", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0003", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0004", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0005", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0006", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0007", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0008", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B0009", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B00010", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B00011", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B00012", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B00013", "Buku", 5000.0, 6000.0, 100));
-        db.addBarang(new Barang("B00014", "Buku", 5000.0, 6000.0, 100));
 
         barangList = db.getSemuaBarang();
         listView = (ListView) findViewById(R.id.listBarang);
