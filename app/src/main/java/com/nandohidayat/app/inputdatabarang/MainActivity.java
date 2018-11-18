@@ -10,37 +10,31 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.List;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends AppCompatActivity {
     String dataBarang[] = null;
     String dB[] = null;
+    private ListView listView;
+    private CustomAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         DatabaseHandler db = new DatabaseHandler(this);
 
         db.addBarang(new Barang("B0001", "Buku", 5000.0, 6000.0, 100));
 
         List<Barang> barangList = db.getSemuaBarang();
-        dataBarang = new String[barangList.size()];
-        dB = new String[barangList.size()];
-        int i = 0;
-        for(Barang barang : barangList) {
-            dataBarang[i] = barang.getKodeBarang() +
-                    " | " + barang.getNamaBarang() +
-                    " | " + barang.getHargaBeli() +
-                    " | " + barang.getHargaJual() +
-                    " | " + barang.getStok();
-            dB[i] = barang.getKodeBarang();
-            i++;
-        }
+        listView = (ListView) findViewById(R.id.listBarang);
 
-        setListAdapter(new ArrayAdapter<Object>(this, android.R.layout.simple_list_item_1, dataBarang));
-        registerForContextMenu(getListView());
+        adapter = new CustomAdapter(barangList, this);
+        listView.setAdapter(adapter);
+
+        registerForContextMenu(listView);
     }
 
     @Override
